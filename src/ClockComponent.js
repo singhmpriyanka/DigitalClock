@@ -16,7 +16,7 @@ export default function ClockComponent() {
     let hours = time.getHours();
     let minutes = time.getMinutes();
     let seconds = time.getSeconds();
-    let meridiem = hours > 12 ? "PM" : "AM";
+    let meridiem = hours >= 12 ? "PM" : "AM";
     return `${appZero(hours)}: ${appZero(minutes)}: ${appZero(
       seconds
     )} ${meridiem}`;
